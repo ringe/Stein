@@ -28,7 +28,7 @@ public interface Player extends Remote {
 	public String name() throws RemoteException;
 	
 	/**
-	 * Announce this Player about {@link Server} changes.
+	 * Announce this Player about {@link Srv} changes.
 	 * @throws RemoteException
 	 */
 	public void announce() throws RemoteException;
@@ -42,14 +42,14 @@ public interface Player extends Remote {
 	
 	/**
 	 * See if this Player the one starting the {@link Game}.
-	 * @return
+	 * @return true or false
 	 * @throws RemoteException
 	 */
 	public boolean agressive() throws RemoteException;
 	
 	/**
 	 * Return the name of the opposing player in the current {@link Game}.
-	 * @return
+	 * @return opponent's name
 	 * @throws RemoteException
 	 */
 	public String opponent() throws RemoteException;
@@ -96,7 +96,7 @@ public interface Player extends Remote {
 	public void withdraw() throws RemoteException;
 	
 	/**
-	 * End the current {@link Game} and remove this from the {@link Server}.
+	 * End the current {@link Game} and remove this from the {@link Srv}.
 	 * @throws RemoteException
 	 */
 	public void endGame() throws RemoteException;

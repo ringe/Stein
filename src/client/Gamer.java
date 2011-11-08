@@ -1,6 +1,3 @@
-/**
- * 
- */
 package client;
 
 import java.rmi.RemoteException;
@@ -14,30 +11,39 @@ import base.Player;
 import base.Srv;
 
 /**
- * Gamer Object.
- * 
- * The {@link Player} implementation for the Stein {@link Client}.
- * 
- * @author alex & runar
- * @version 1.0
+ * Gamer Object. The  {@link Player}  implementation for the Stein  {@link Client} .
+ * @author  alex & runar
+ * @version  1.0
  */
 public class Gamer extends UnicastRemoteObject implements Player {
 
 	private static final long serialVersionUID = 489787298622517492L;
 
 	private String name;
+	/**
+	 * @uml.property  name="server"
+	 * @uml.associationEnd  
+	 */
 	private Srv server;
+	/**
+	 * @uml.property  name="game"
+	 * @uml.associationEnd  
+	 */
 	private Game game;
+	/**
+	 * @uml.property  name="shell"
+	 * @uml.associationEnd  
+	 */
 	private Client shell;
 	private Display display;
 	private String challenger;
 	
 	/**
-	 * <P>Create a new Gamer instance by the given name, on the given {@link Server},
+	 * <P>Create a new Gamer instance by the given name, on the given {@link server.Server},
 	 * using the given Shell on the given Display.
 	 * 
-	 * @param _name				The name of the Gamer ({@Player}) created.
-	 * @param srv				The Stein {@link Server} for this Gamer
+	 * @param _name				The name of the Gamer ({@link Player}) created.
+	 * @param srv				The Stein {@link server.Server} for this Gamer
 	 * @param _shell			The GUI this Gamer is using.
 	 * @param _display			The display the given Shell is using. 
 	 * @throws RemoteException

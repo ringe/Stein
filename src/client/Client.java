@@ -29,14 +29,10 @@ import base.Srv;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 /**
-*  Client object
-*  
-*  GUI to connect with the server and create a player and a game
-*  
-* @author runar & alex
-* @version 1.0
-*/
-
+ * Client object GUI to connect with the server and create a player and a game
+ * @author  runar & alex
+ * @version  1.0
+ */
 public class Client extends Shell {
 
 	private Composite composite;
@@ -52,7 +48,15 @@ public class Client extends Shell {
 	private Button btnQuit;
 	private Label lblChooseAPlayer;
 	private String selected;
+	/**
+	 * @uml.property  name="server"
+	 * @uml.associationEnd  
+	 */
 	private Srv server;
+	/**
+	 * @uml.property  name="player"
+	 * @uml.associationEnd  
+	 */
 	private Player player;
 	private Composite composite_1;
 	private Label lblOutcome;
@@ -90,7 +94,8 @@ public class Client extends Shell {
 
 	/**
 	 * Create the shell.
-	 * @param display
+	 * 
+	 * @param disp					The Display to create this Client on.
 	 * @throws RemoteException 
 	 * @throws NotBoundException 
 	 * @throws MalformedURLException 

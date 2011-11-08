@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="stein" size="1561,378" id="" metadata="uml2-1.0" initialized="true" scrolledY="370" tag="10" key="32303037303533312D313020537465696E">
+  <children xsi:type="editmodel:PackageEditModel" targetConnections="//@children.2/@sourceConnections.0" name="base" location="555,360" size="596,694" id="base">
+    <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.1/@children.1/@sourceConnections.3 //@children.2/@children.0/@sourceConnections.0 //@children.2/@children.0/@sourceConnections.3 //@children.2/@children.1/@sourceConnections.3" name="Game" location="361,38" size="100,225" id="base/Game">
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <children xsi:type="editmodel:CompartmentEditModel" size="77,162">
+        <children xsi:type="editmodel:MethodEditModel" name="amIstupid" id="base/Game#amIstupid(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="defeats" id="base/Game#defeats(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="draws" id="base/Game#draws(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="move" id="base/Game#move(Ljava.lang.String;Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="opponent" id="base/Game#opponent(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="owner" id="base/Game#owner()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="title" id="base/Game#title()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="wins" id="base/Game#wins(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="withdraw" id="base/Game#withdraw(Ljava.lang.String;)"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+    <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.1/@children.0/@sourceConnections.0 //@children.1/@children.1/@sourceConnections.0 //@children.2/@children.0/@sourceConnections.1 //@children.2/@children.0/@sourceConnections.2 //@children.2/@children.0/@sourceConnections.4 //@children.2/@children.1/@sourceConnections.2 //@children.2/@children.1/@sourceConnections.4" name="Player" location="68,221" size="113,315" id="base/Player">
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <children xsi:type="editmodel:CompartmentEditModel" size="90,252">
+        <children xsi:type="editmodel:MethodEditModel" name="Hello" id="base/Player#Hello()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="agressive" id="base/Player#agressive()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="announce" id="base/Player#announce()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="challenge" id="base/Player#challenge(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="defeats" id="base/Player#defeats()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="draws" id="base/Player#draws()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="endGame" id="base/Player#endGame()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="gameUpdate" id="base/Player#gameUpdate()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="move" id="base/Player#move(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="name" id="base/Player#name()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="newGame" id="base/Player#newGame(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="opponent" id="base/Player#opponent()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="wins" id="base/Player#wins()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="withdraw" id="base/Player#withdraw()"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+    <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.1/@children.0/@sourceConnections.1 //@children.1/@children.1/@sourceConnections.2 //@children.2/@children.1/@sourceConnections.0 //@children.2/@children.1/@sourceConnections.6" name="Srv" location="234,494" size="154,171" id="base/Srv">
+      <children xsi:type="editmodel:CompartmentEditModel" size="131,18">
+        <children xsi:type="editmodel:AttributeEditModel" name="sERVICE_NAME" id="base/Srv#sERVICE_NAME"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel" size="81,90">
+        <children xsi:type="editmodel:MethodEditModel" name="getPlayers" id="base/Srv#getPlayers()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="leave" id="base/Srv#leave(Lbase.Player;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="loadGame" id="base/Srv#loadGame(Ljava.lang.String;Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="register" id="base/Srv#register(Lbase.Player;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="remove" id="base/Srv#remove(Lbase.Game;)"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="client" location="1185,375" size="631,689" id="client">
+    <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@children.1/@sourceConnections.1" name="Client" location="162,434" size="152,229" id="client/Client">
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <children xsi:type="editmodel:CompartmentEditModel" size="129,180">
+        <children xsi:type="editmodel:MethodEditModel" name="Client" id="client/Client#Client(Lorg.eclipse.swt.widgets.Display;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="LoadGamePane" id="client/Client#LoadGamePane()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="LoadNewGamePane" id="client/Client#LoadNewGamePane()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="gameButtonsSwitch" id="client/Client#gameButtonsSwitch(Z)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="main" id="client/Client#main([Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="opponentLeft" id="client/Client#opponentLeft()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="quit" id="client/Client#quit()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="sayWelcome" id="client/Client#sayWelcome(Lorg.eclipse.swt.widgets.Composite;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="statusUpdate" id="client/Client#statusUpdate()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="updateList" id="client/Client#updateList()"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="base/Player@player+client/Client@" source="//@children.1/@children.0" target="//@children.0/@children.1" targetEnd="//@children.1/@children.0/@sourceConnections.0/@children.2" label="//@children.1/@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.1/@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+        <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,43" id="base/Player@player+client/Client@|client/Client#" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" name="player" location="113,271" id="base/Player@player+client/Client@|base/Player#player" multiplicityLabel="//@children.1/@children.0/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.1/@children.0/@sourceConnections.0/@children.2/@children.0" navigable="true">
+          <children xsi:type="editmodel:LabelEditModel" name=" - player" location="743,831" size="40,14" anchorKind="LastPart"/>
+          <children xsi:type="editmodel:LabelEditModel" name="0..1" location="743,859" size="18,14" anchorKind="LastPart"/>
+        </children>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="base/Srv@server+client/Client@" source="//@children.1/@children.0" target="//@children.0/@children.2" targetEnd="//@children.1/@children.0/@sourceConnections.1/@children.2" label="//@children.1/@children.0/@sourceConnections.1/@children.0" sourceEnd="//@children.1/@children.0/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+        <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,130" id="base/Srv@server+client/Client@|client/Client#" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" name="server" location="154,85" id="base/Srv@server+client/Client@|base/Srv#server" multiplicityLabel="//@children.1/@children.0/@sourceConnections.1/@children.2/@children.1" roleLabel="//@children.1/@children.0/@sourceConnections.1/@children.2/@children.0" navigable="true">
+          <children xsi:type="editmodel:LabelEditModel" name=" - server" location="950,918" size="42,14" anchorKind="LastPart"/>
+          <children xsi:type="editmodel:LabelEditModel" name="0..1" location="950,946" size="18,14" anchorKind="LastPart"/>
+        </children>
+      </sourceConnections>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+    <children xsi:type="editmodel:ClassEditModel" name="Gamer" location="118,59" size="113,319" id="client/Gamer">
+      <children xsi:type="editmodel:CompartmentEditModel" size="79,18">
+        <children xsi:type="editmodel:AttributeEditModel" name="name" id="client/Gamer#name"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel" size="90,252">
+        <children xsi:type="editmodel:MethodEditModel" name="Hello" id="client/Gamer#Hello()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="agressive" id="client/Gamer#agressive()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="announce" id="client/Gamer#announce()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="challenge" id="client/Gamer#challenge(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="defeats" id="client/Gamer#defeats()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="draws" id="client/Gamer#draws()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="endGame" id="client/Gamer#endGame()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="gameUpdate" id="client/Gamer#gameUpdate()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="move" id="client/Gamer#move(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="name" id="client/Gamer#name()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="newGame" id="client/Gamer#newGame(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="opponent" id="client/Gamer#opponent()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="wins" id="client/Gamer#wins()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="withdraw" id="client/Gamer#withdraw()"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="base/Player&lt;-client/Gamer" source="//@children.1/@children.1" target="//@children.0/@children.1" targetEnd="//@children.1/@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,232" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="113,85"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="client/Client@shell+client/Gamer@" source="//@children.1/@children.1" target="//@children.1/@children.0" targetEnd="//@children.1/@children.1/@sourceConnections.1/@children.2" label="//@children.1/@children.1/@sourceConnections.1/@children.0" sourceEnd="//@children.1/@children.1/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+        <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="78,319" id="client/Client@shell+client/Gamer@|client/Gamer#" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" name="shell" location="34,0" id="client/Client@shell+client/Gamer@|client/Client#shell" multiplicityLabel="//@children.1/@children.1/@sourceConnections.1/@children.2/@children.1" roleLabel="//@children.1/@children.1/@sourceConnections.1/@children.2/@children.0" navigable="true">
+          <children xsi:type="editmodel:LabelEditModel" name=" - shell" location="1388,788" size="32,14" anchorKind="LastPart"/>
+          <children xsi:type="editmodel:LabelEditModel" name="0..1" location="1356,788" size="18,14" anchorKind="LastPart"/>
+        </children>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="base/Srv@server+client/Gamer@" source="//@children.1/@children.1" target="//@children.0/@children.2" targetEnd="//@children.1/@children.1/@sourceConnections.2/@children.2" label="//@children.1/@children.1/@sourceConnections.2/@children.0" sourceEnd="//@children.1/@children.1/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+        <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="10,319" id="base/Srv@server+client/Gamer@|client/Gamer#" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" name="server" location="154,10" id="base/Srv@server+client/Gamer@|base/Srv#server" multiplicityLabel="//@children.1/@children.1/@sourceConnections.2/@children.2/@children.1" roleLabel="//@children.1/@children.1/@sourceConnections.2/@children.2/@children.0" navigable="true">
+          <children xsi:type="editmodel:LabelEditModel" name=" - server" location="950,871" size="42,14" anchorKind="LastPart"/>
+          <children xsi:type="editmodel:LabelEditModel" name="0..1" location="950,843" size="18,14" anchorKind="LastPart"/>
+        </children>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="base/Game@game+client/Gamer@" source="//@children.1/@children.1" target="//@children.0/@children.0" targetEnd="//@children.1/@children.1/@sourceConnections.3/@children.2" label="//@children.1/@children.1/@sourceConnections.3/@children.0" sourceEnd="//@children.1/@children.1/@sourceConnections.3/@children.1" connectionRouterKind="Manhattan">
+        <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,94" id="base/Game@game+client/Gamer@|client/Gamer#" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" name="game" location="100,130" id="base/Game@game+client/Gamer@|base/Game#game" multiplicityLabel="//@children.1/@children.1/@sourceConnections.3/@children.2/@children.1" roleLabel="//@children.1/@children.1/@sourceConnections.3/@children.2/@children.0" navigable="true">
+          <children xsi:type="editmodel:LabelEditModel" name=" - game" location="1023,507" size="36,14" anchorKind="LastPart"/>
+          <children xsi:type="editmodel:LabelEditModel" name="0..1" location="1023,535" size="18,14" anchorKind="LastPart"/>
+        </children>
+      </sourceConnections>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="server" location="10,360" size="481,671" id="server">
+    <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@children.1/@sourceConnections.1 //@children.2/@children.1/@sourceConnections.5" name="Play" location="56,41" size="100,265" id="server/Play">
+      <children xsi:type="editmodel:CompartmentEditModel" size="69,36">
+        <children xsi:type="editmodel:AttributeEditModel" name="draws" id="server/Play#draws"/>
+        <children xsi:type="editmodel:AttributeEditModel" name="title" id="server/Play#title"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel" size="77,180">
+        <children xsi:type="editmodel:MethodEditModel" name="amIstupid" id="server/Play#amIstupid(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="defeats" id="server/Play#defeats(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="draws" id="server/Play#draws(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="move" id="server/Play#move(Ljava.lang.String;Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="opponent" id="server/Play#opponent(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="owner" id="server/Play#owner()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="setTitle" id="server/Play#setTitle()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="title" id="server/Play#title()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="wins" id="server/Play#wins(Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="withdraw" id="server/Play#withdraw(Ljava.lang.String;)"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="base/Game&lt;-server/Play" source="//@children.2/@children.0" target="//@children.0/@children.0" targetEnd="//@children.2/@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:AssociationEndEditModel" location="100,111" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,114"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="base/Player@opponent+server/Play@" source="//@children.2/@children.0" target="//@children.0/@children.1" targetEnd="//@children.2/@children.0/@sourceConnections.1/@children.2" label="//@children.2/@children.0/@sourceConnections.1/@children.0" sourceEnd="//@children.2/@children.0/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+        <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="100,222" id="base/Player@opponent+server/Play@|server/Play#" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" name="opponent" location="0,42" id="base/Player@opponent+server/Play@|base/Player#opponent" multiplicityLabel="//@children.2/@children.0/@sourceConnections.1/@children.2/@children.1" roleLabel="//@children.2/@children.0/@sourceConnections.1/@children.2/@children.0" navigable="true">
+          <children xsi:type="editmodel:LabelEditModel" name=" - opponent" location="561,602" size="55,14" anchorKind="LastPart"/>
+          <children xsi:type="editmodel:LabelEditModel" name="1" location="610,630" size="6,14" anchorKind="LastPart"/>
+        </children>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="base/Player@owner+server/Play@" source="//@children.2/@children.0" target="//@children.0/@children.1" targetEnd="//@children.2/@children.0/@sourceConnections.2/@children.2" label="//@children.2/@children.0/@sourceConnections.2/@children.0" sourceEnd="//@children.2/@children.0/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+        <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="100,242" id="base/Player@owner+server/Play@|server/Play#" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" name="owner" location="0,84" id="base/Player@owner+server/Play@|base/Player#owner" multiplicityLabel="//@children.2/@children.0/@sourceConnections.2/@children.2/@children.1" roleLabel="//@children.2/@children.0/@sourceConnections.2/@children.2/@children.0" navigable="true">
+          <children xsi:type="editmodel:LabelEditModel" name=" - owner" location="574,672" size="42,14" anchorKind="LastPart"/>
+          <children xsi:type="editmodel:LabelEditModel" name="1" location="610,644" size="6,14" anchorKind="LastPart"/>
+        </children>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="server/Play-Soyatec::Implement->base/Game" source="//@children.2/@children.0" target="//@children.0/@children.0" targetEnd="//@children.2/@children.0/@sourceConnections.3/@children.2" label="//@children.2/@children.0/@sourceConnections.3/@children.0" sourceEnd="//@children.2/@children.0/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="100,131" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,118"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="server/Play-Standard::Call->base/Player*server/Play-Soyatec::Import->base/Player" source="//@children.2/@children.0" target="//@children.0/@children.1" targetEnd="//@children.2/@children.0/@sourceConnections.4/@children.2" label="//@children.2/@children.0/@sourceConnections.4/@children.0" sourceEnd="//@children.2/@children.0/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:WireLabelEditModel" name="«Call, Import»" size="64,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="100,202" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,11"/>
+      </sourceConnections>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+    <children xsi:type="editmodel:ClassEditModel" name="Server" location="73,499" size="104,157" id="server/Server">
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <children xsi:type="editmodel:CompartmentEditModel" size="81,108">
+        <children xsi:type="editmodel:MethodEditModel" name="getPlayers" id="server/Server#getPlayers()"/>
+        <children xsi:type="editmodel:MethodEditModel" name="leave" id="server/Server#leave(Lbase.Player;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="loadGame" id="server/Server#loadGame(Ljava.lang.String;Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="main" id="server/Server#main([Ljava.lang.String;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="register" id="server/Server#register(Lbase.Player;)"/>
+        <children xsi:type="editmodel:MethodEditModel" name="remove" id="server/Server#remove(Lbase.Game;)"/>
+      </children>
+      <children xsi:type="editmodel:CompartmentEditModel"/>
+      <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="base/Srv&lt;-server/Server" source="//@children.2/@children.1" target="//@children.0/@children.2" targetEnd="//@children.2/@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:AssociationEndEditModel" location="104,78" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,83"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="server/Play@games+server/Server@" source="//@children.2/@children.1" target="//@children.2/@children.0" targetEnd="//@children.2/@children.1/@sourceConnections.1/@children.2" label="//@children.2/@children.1/@sourceConnections.1/@children.0" sourceEnd="//@children.2/@children.1/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+        <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="41,0" id="server/Play@games+server/Server@|server/Server#" attachSource="true">
+          <children xsi:type="editmodel:QualifierAttributeEditModel" name="title" location="109,841" size="31,23" id=""/>
+        </children>
+        <children xsi:type="editmodel:AssociationEndEditModel" name="games" location="58,265" id="server/Play@games+server/Server@|server/Play#games" multiplicityLabel="//@children.2/@children.1/@sourceConnections.1/@children.2/@children.1" roleLabel="//@children.2/@children.1/@sourceConnections.1/@children.2/@children.0" navigable="true">
+          <children xsi:type="editmodel:LabelEditModel" name=" + games" location="131,673" size="44,14" anchorKind="LastPart"/>
+          <children xsi:type="editmodel:LabelEditModel" name="0..1" location="99,673" size="18,14" anchorKind="LastPart"/>
+        </children>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="base/Player@players+server/Server@" source="//@children.2/@children.1" target="//@children.0/@children.1" targetEnd="//@children.2/@children.1/@sourceConnections.2/@children.2" label="//@children.2/@children.1/@sourceConnections.2/@children.0" sourceEnd="//@children.2/@children.1/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+        <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="104,18" id="base/Player@players+server/Server@|server/Server#" attachSource="true">
+          <children xsi:type="editmodel:QualifierAttributeEditModel" name="name" location="183,866" size="41,23" id=""/>
+        </children>
+        <children xsi:type="editmodel:AssociationEndEditModel" name="players" location="0,296" id="base/Player@players+server/Server@|base/Player#players" multiplicityLabel="//@children.2/@children.1/@sourceConnections.2/@children.2/@children.1" roleLabel="//@children.2/@children.1/@sourceConnections.2/@children.2/@children.0" navigable="true">
+          <children xsi:type="editmodel:LabelEditModel" name=" + players" location="568,856" size="48,14" anchorKind="LastPart"/>
+          <children xsi:type="editmodel:LabelEditModel" name="0..1" location="598,884" size="18,14" anchorKind="LastPart"/>
+        </children>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="server/Server-Standard::Call->base/Game*server/Server-Soyatec::Import->base/Game" source="//@children.2/@children.1" target="//@children.0/@children.0" targetEnd="//@children.2/@children.1/@sourceConnections.3/@children.2" label="//@children.2/@children.1/@sourceConnections.3/@children.0" sourceEnd="//@children.2/@children.1/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:WireLabelEditModel" name="«Call, Import»" size="64,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="104,51" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,138"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="server/Server-Standard::Call->base/Player*server/Server-Soyatec::Import->base/Player" source="//@children.2/@children.1" target="//@children.0/@children.1" targetEnd="//@children.2/@children.1/@sourceConnections.4/@children.2" label="//@children.2/@children.1/@sourceConnections.4/@children.0" sourceEnd="//@children.2/@children.1/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:WireLabelEditModel" name="«Call, Import»" size="64,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="99,0" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,265"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="server/Server-Standard::Instantiate->server/Play*server/Server-Soyatec::Import->server/Play" source="//@children.2/@children.1" target="//@children.2/@children.0" targetEnd="//@children.2/@children.1/@sourceConnections.5/@children.2" label="//@children.2/@children.1/@sourceConnections.5/@children.0" sourceEnd="//@children.2/@children.1/@sourceConnections.5/@children.1" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:WireLabelEditModel" name="«Instantiate, Import»" size="96,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="21,0" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="23,265"/>
+      </sourceConnections>
+      <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="server/Server-Soyatec::Implement->base/Srv" source="//@children.2/@children.1" target="//@children.0/@children.2" targetEnd="//@children.2/@children.1/@sourceConnections.6/@children.2" label="//@children.2/@children.1/@sourceConnections.6/@children.0" sourceEnd="//@children.2/@children.1/@sourceConnections.6/@children.1" connectionRouterKind="Manual">
+        <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="104,98" attachSource="true"/>
+        <children xsi:type="editmodel:AssociationEndEditModel" location="0,87"/>
+      </sourceConnections>
+      <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+    </children>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="server-Standard::Call->base*server-Soyatec::Import->base*server-Soyatec::Implement->base" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Call, Import, Implement»" size="117,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="481,335" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,335"/>
+    </sourceConnections>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=7;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

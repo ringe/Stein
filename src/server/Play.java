@@ -1,6 +1,3 @@
-/**
- * 
- */
 package server;
 
 import java.rmi.RemoteException;
@@ -21,13 +18,39 @@ import base.Player;
 public class Play extends UnicastRemoteObject implements Game {
 
 	private static final long serialVersionUID = -4068485307729874645L;
+	/**
+	 * @uml.property  name="opponent"
+	 * @uml.associationEnd  multiplicity="(1 1)"
+	 */
 	private Player opponent;
+	/**
+	 * @uml.property  name="opponentWins"
+	 */
 	private int opponentWins;
+	/**
+	 * @uml.property  name="owner"
+	 * @uml.associationEnd  multiplicity="(1 1)"
+	 */
 	private Player owner;
+	/**
+	 * @uml.property  name="ownerWins"
+	 */
 	private int ownerWins;
+	/**
+	 * @uml.property  name="draws"
+	 */
 	private int draws;
+	/**
+	 * @uml.property  name="title"
+	 */
 	private String title;
+	/**
+	 * @uml.property  name="owM"
+	 */
 	private String owM = null;
+	/**
+	 * @uml.property  name="opM"
+	 */
 	private String opM = null;
 
 	
@@ -45,11 +68,17 @@ public class Play extends UnicastRemoteObject implements Game {
 		opponent.challenge(owner.name());
 	}
 
+	/* (non-Javadoc)
+	 * @see base.Game#owner()
+	 */
 	@Override
 	public String owner() throws RemoteException {
 		return owner.name();
 	}
 
+	/* (non-Javadoc)
+	 * @see base.Game#opponent(java.lang.String)
+	 */
 	@Override
 	public String opponent(String name) throws RemoteException {
 		if (owner.name().equals(name))
@@ -69,11 +98,17 @@ public class Play extends UnicastRemoteObject implements Game {
 		System.out.println("Game created: " +title);
 	}
 
+	/* (non-Javadoc)
+	 * @see base.Game#title()
+	 */
 	@Override
 	public String title() throws RemoteException {
 		return title;
 	}
 
+	/* (non-Javadoc)
+	 * @see base.Game#move(java.lang.String, java.lang.String)
+	 */
 	@Override
 	public void move(String name, String move) throws RemoteException {
 		if (owner.name().equals(name))
@@ -101,11 +136,17 @@ public class Play extends UnicastRemoteObject implements Game {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see base.Game#amIstupid(java.lang.String)
+	 */
 	@Override
 	public boolean amIstupid(String name) throws RemoteException {
 		return owner.name().equals(name);
 	}
 
+	/* (non-Javadoc)
+	 * @see base.Game#wins(java.lang.String)
+	 */
 	@Override
 	public int wins(String name) throws RemoteException {
 		if (owner.name().equals(name))
@@ -113,11 +154,17 @@ public class Play extends UnicastRemoteObject implements Game {
 		return opponentWins;
 	}
 
+	/* (non-Javadoc)
+	 * @see base.Game#draws(java.lang.String)
+	 */
 	@Override
 	public int draws(String name) throws RemoteException {
 		return draws;
 	}
 
+	/* (non-Javadoc)
+	 * @see base.Game#defeats(java.lang.String)
+	 */
 	@Override
 	public int defeats(String name) throws RemoteException {
 		if (owner.name().equals(name))
@@ -125,6 +172,9 @@ public class Play extends UnicastRemoteObject implements Game {
 		return ownerWins;
 	}
 
+	/* (non-Javadoc)
+	 * @see base.Game#withdraw(java.lang.String)
+	 */
 	@Override
 	public void withdraw(String name) throws RemoteException {
 		if (owner.name().equals(name))

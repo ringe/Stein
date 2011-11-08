@@ -28,10 +28,14 @@ public class Server extends UnicastRemoteObject implements Srv {
 	
 	/**
 	 * players - list of registered players
+	 * @uml.property  name="players"
+	 * @uml.associationEnd  qualifier="name:java.lang.String base.Player"
 	 */
 	public Hashtable<String,Player> players;
 	/**
-	 * games - list of initiated games 
+	 * games - list of initiated games
+	 * @uml.property  name="games"
+	 * @uml.associationEnd  qualifier="title:java.lang.String server.Play"
 	 */
 	public Hashtable<String,Play> games;
 	/**

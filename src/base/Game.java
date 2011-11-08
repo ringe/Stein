@@ -3,6 +3,14 @@ package base;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
+/**
+ * Game Interface
+*  
+*  The Game represents the Stein game, with the players, the move and the outcome. 
+*  
+* @author runar & alex
+* @version 1.0
+ */
 public interface Game extends Remote {
 
 	/**
@@ -41,7 +49,7 @@ public interface Game extends Remote {
 	/**
 	 * Check's if the player is the owner of the game
 	 * @param name
-	 * @return
+	 * @return true or false
 	 * @throws RemoteException
 	 */
 	public boolean amIstupid(String name) throws RemoteException;

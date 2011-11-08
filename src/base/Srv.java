@@ -45,7 +45,7 @@ public interface Srv extends Remote {
 	 
 	 /**
 	  * Get the players in an array for the list
-	 * @return
+	 * @return Object[] array of {@link Player}
 	 * @throws RemoteException
 	 */
 	public Object[] getPlayers() throws RemoteException;
