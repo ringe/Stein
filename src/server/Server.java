@@ -38,9 +38,6 @@ public class Server extends UnicastRemoteObject implements Srv {
 	 * @uml.associationEnd  qualifier="title:java.lang.String server.Play"
 	 */
 	public Hashtable<String,Play> games;
-	/**
-	 * playercount - number of players registered
-	 */
 	
 	/**
 	 * Constructor for the Server class. Initiates players and games with

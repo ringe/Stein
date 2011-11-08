@@ -6,6 +6,7 @@ import java.rmi.ConnectException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.rmi.UnknownHostException;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseAdapter;
@@ -59,7 +60,6 @@ public class Client extends Shell {
 	 */
 	private Player player;
 	private Composite composite_1;
-	private Label lblOutcome;
 	private Button btnCancel;
 	private Button btnRock;
 	private Button btnScissors;
@@ -102,20 +102,26 @@ public class Client extends Shell {
 	 */
 	public Client(Display disp) throws RemoteException, MalformedURLException, NotBoundException {
 		super(disp, SWT.SHELL_TRIM);
+		setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		display = disp;
 		System.out.println("Started");
 		
 		list = new List(this, SWT.BORDER);
-		list.setEnabled(true);
+		list.setItems(new String[] {"player list"});
+		list.setEnabled(false);
 		list.setBounds(250, 7, 174, 245);
 		createContents();
 
 		status = new Label(this, SWT.NONE);
-		status.setBounds(54, 237, 190, 15);
+		status.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		status.setFont(SWTResourceManager.getFont("Arial", 11, SWT.NORMAL));
+		status.setBounds(66, 237, 178, 15);
 		status.setText("Ready");
 
 		lblStatus = new Label(this, SWT.NONE);
-		lblStatus.setBounds(10, 237, 38, 15);
+		lblStatus.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblStatus.setFont(SWTResourceManager.getFont("Arial", 11, SWT.NORMAL));
+		lblStatus.setBounds(10, 237, 50, 17);
 		lblStatus.setText("Status: ");
 		
 		LoadWelcomePane();
@@ -128,7 +134,7 @@ public class Client extends Shell {
 	 * Create contents of the shell.
 	 */
 	protected void createContents() {
-		setText("SWT Application");
+		setText("Stein!");
 		setSize(450, 300);
 
 	}
@@ -138,28 +144,32 @@ public class Client extends Shell {
 	 */
 	private void LoadWelcomePane() {
 		composite = new Composite(this, SWT.NONE);
+		composite.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		composite.setBounds(9, 10, 235, 221);
 
 		sayWelcome(composite);
 
+		serverName = new Text(composite, SWT.BORDER);
+		serverName.setBounds(124, 95, 110, 21);
+		serverName.setText("localhost");
+		
 		userName = new Text(composite, SWT.BORDER);
 		userName.setBounds(124, 122, 110, 21);
 		userName.setText("per");
 
-		serverName = new Text(composite, SWT.BORDER);
-		serverName.setBounds(124, 95, 110, 21);
-		serverName.setText("localhost");
-
 		Label lblName = new Label(composite, SWT.NONE);
+		lblName.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		lblName.setBounds(10, 125, 118, 15);
 		lblName.setText("Your name");
 
 		Label lblServer = new Label(composite, SWT.NONE);
+		lblServer.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		lblServer.setBounds(10, 98, 118, 15);
 		lblServer.setText("Server");
 
 		Button btnJoinGame = new Button(composite, SWT.NONE);
-		btnJoinGame.setBounds(159, 149, 75, 25);
+		btnJoinGame.setFont(SWTResourceManager.getFont("Arial", 11, SWT.NORMAL));
+		btnJoinGame.setBounds(148, 151, 82, 29);
 		btnJoinGame.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent event) {
@@ -170,8 +180,8 @@ public class Client extends Shell {
 				display.asyncExec(new Runnable() {
 					public void run() {
 						try {
-							// Connect to Server TODO: localhost?
-							server = (Srv)Naming.lookup("SteinEngine");
+							// Connect to Server
+							server = (Srv)Naming.lookup("rmi://" + serverName.getText() + "/SteinEngine");
 							
 							// Create a new Player
 							player = new Gamer(name, server, getShell(), display);
@@ -187,10 +197,15 @@ public class Client extends Shell {
 							status.setText("Game on!");
 						}
 						catch (ConnectException ce) {
-							errorPopup("Unable to find the Server specified.");
+							errorPopup("No Server found at the given location.");
 							status.setText("Is the Server running?");
 							composite.setCursor(cursor);
-						} 
+						}
+						catch (UnknownHostException ue) {
+							errorPopup("Host not found: \"" + ue.detail.getMessage() + "\".");
+							status.setText("Choose a different server.");
+							composite.setCursor(cursor);
+						}
 						catch (RemoteException ce) {
 							errorPopup(ce.detail.getMessage());
 							status.setText("Choose a different name.");
@@ -214,8 +229,11 @@ public class Client extends Shell {
 	public void LoadNewGamePane()
 	{	
 		composite_2 = new Composite(this, SWT.NONE);
+		composite_2.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		composite_2.setBounds(9, 10, 235, 221);
 		composite_2.setCursor(cursor);
+		
+		list.setEnabled(true);
 
 		btnPlay = new Button(composite_2, SWT.NONE);
 		btnPlay.setToolTipText("You have to choose a player!");
@@ -235,11 +253,12 @@ public class Client extends Shell {
 
 		sayWelcome(composite_2);
 
-		lblChooseAPlayer = new Label(composite_2, SWT.NONE | SWT.WRAP);
+		lblChooseAPlayer = new Label(composite_2, SWT.NONE);
+		lblChooseAPlayer.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		lblChooseAPlayer.setAlignment(SWT.CENTER);
-		lblChooseAPlayer.setFont(SWTResourceManager.getFont("Andy", 16, SWT.NORMAL));
-		lblChooseAPlayer.setBounds(10, 98, 215, 50);
-		lblChooseAPlayer.setText("Choose a player from the list!");
+		lblChooseAPlayer.setFont(SWTResourceManager.getFont("Comic Sans MS", 14, SWT.NORMAL));
+		lblChooseAPlayer.setBounds(0, 98, 230, 71);
+		lblChooseAPlayer.setText("Choose a player\nfrom the list!");
 
 		/**
 		 *  Choose a player from the list of players
@@ -300,12 +319,8 @@ public class Client extends Shell {
 			status.setText("You got challenged by " + player.opponent());
 
 		composite_1 = new Composite(this, SWT.NONE);
+		composite_1.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		composite_1.setBounds(10, 10, 230, 221);
-
-		lblOutcome = new Label(composite_1, SWT.NONE);
-		lblOutcome.setAlignment(SWT.CENTER);
-		lblOutcome.setFont(SWTResourceManager.getFont("Cooper Black", 27, SWT.NORMAL));
-		lblOutcome.setBounds(0, 84, 230, 90);
 
 		btnCancel = new Button(composite_1, SWT.NONE);
 		btnCancel.addSelectionListener(new SelectionAdapter() {
@@ -320,38 +335,41 @@ public class Client extends Shell {
 				LoadNewGamePane();
 			}
 		});
-		btnCancel.setBounds(155, 196, 75, 25);
-		btnCancel.setText("Cancel");
+		btnCancel.setBounds(118, 192, 112, 29);
+		btnCancel.setText("Withdraw");
 
 		btnRock = new Button(composite_1, SWT.NONE);
+		btnRock.setToolTipText("Rock");
+		btnRock.setImage(SWTResourceManager.getImage(Client.class, "/client/rock.png"));
 		addButtonMove(btnRock, "Rock");
-		btnRock.setBounds(0, 196, 75, 25);
-		btnRock.setText("Rock");
+		btnRock.setBounds(0, 113, 112, 107);
 
 		btnScissors = new Button(composite_1, SWT.NONE);
+		btnScissors.setToolTipText("Scissors");
+		btnScissors.setImage(SWTResourceManager.getImage(Client.class, "/client/scissors.png"));
 		addButtonMove(btnScissors, "Scissors");
-		btnScissors.setBounds(0, 0, 75, 25);
-		btnScissors.setText("Scissors");
+		btnScissors.setBounds(0, 0, 112, 107);
 
 		btnPaper = new Button(composite_1, SWT.NONE);
+		btnPaper.setToolTipText("Paper");
+		btnPaper.setImage(SWTResourceManager.getImage(Client.class, "/client/paper.png"));
 		addButtonMove(btnPaper, "Paper");
-		btnPaper.setBounds(155, 0, 75, 25);
-		btnPaper.setText("Paper");
+		btnPaper.setBounds(118, 0, 112, 107);
 		
 		lblWins = new Label(composite_1, SWT.NONE);
-		lblWins.setAlignment(SWT.CENTER);
-		lblWins.setBounds(1, 58, 75, 15);
+		lblWins.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblWins.setBounds(118, 113, 75, 15);
 		lblWins.setText("0 WINS");
 		
-		lblDraws = new Label(composite_1, SWT.NONE);
-		lblDraws.setAlignment(SWT.CENTER);
-		lblDraws.setText("0 DRAWS");
-		lblDraws.setBounds(77, 58, 75, 15);
-		
 		lblDefeats = new Label(composite_1, SWT.NONE);
-		lblDefeats.setAlignment(SWT.CENTER);
+		lblDefeats.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 		lblDefeats.setText("0 DEFEATS");
-		lblDefeats.setBounds(153, 58, 75, 15);
+		lblDefeats.setBounds(118, 171, 75, 15);
+		
+		lblDraws = new Label(composite_1, SWT.NONE);
+		lblDraws.setBounds(118, 142, 75, 15);
+		lblDraws.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblDraws.setText("0 DRAWS");
 	}
 	
 	
@@ -382,9 +400,10 @@ public class Client extends Shell {
 	{
 		lblWelcomeToStein = new Label(composite, SWT.NONE);
 		lblWelcomeToStein.setAlignment(SWT.CENTER);
-		lblWelcomeToStein.setFont(SWTResourceManager.getFont("Andy", 22, SWT.NORMAL));
-		lblWelcomeToStein.setBounds(21, 41, 193, 33);
-		lblWelcomeToStein.setText("Welcome to Stein!");
+		lblWelcomeToStein.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblWelcomeToStein.setFont(SWTResourceManager.getFont("Comic Sans MS", 22, SWT.NORMAL));
+		lblWelcomeToStein.setBounds(0, 10, 230, 82);
+		lblWelcomeToStein.setText("Welcome\nto Stein!");
 	}
 	
 	/**
@@ -415,7 +434,7 @@ public class Client extends Shell {
 	 * Leave the game, close the window
 	 */
 	public void quit()
-	{//TODO: fixup
+	{
 		try {
 			server.leave(player);
 		} catch (RemoteException e) {
@@ -441,9 +460,7 @@ public class Client extends Shell {
 			list.add(g.name());
 		}
 	}
-	
-	//TODO: cleanup
-	
+		
 	/**
 	 * Method to update the score status
 	 * @throws RemoteException
