@@ -36,7 +36,6 @@ public class Gamer extends UnicastRemoteObject implements Player {
 	 */
 	private Client shell;
 	private Display display;
-	private String challenger;
 	
 	/**
 	 * <P>Create a new Gamer instance by the given name, on the given {@link server.Server},
@@ -95,7 +94,7 @@ public class Gamer extends UnicastRemoteObject implements Player {
 	@Override
 	public void newGame(String opponent) throws RemoteException {
 		game = server.loadGame(opponent, name);
-		System.out.println(game.title());
+		System.out.println("Joined game: " + game.title());
 	}
 
 	/* (non-Javadoc)
@@ -128,12 +127,12 @@ public class Gamer extends UnicastRemoteObject implements Player {
 	 * @see base.Player#challenge(java.lang.String)
 	 */
 	@Override
-	public void challenge(String attacker) throws RemoteException {
-		challenger = attacker;
+	public void challenge(final String attacker) throws RemoteException {
 		display.asyncExec(new Runnable() {
 			public void run() {
 				try {
-					game = server.loadGame(name, challenger);
+					game = server.loadGame(name, attacker);
+					System.out.println("Joined game: " + game.title());
 					shell.LoadGamePane();
 				} catch (RemoteException e) {
 					e.printStackTrace();
@@ -189,6 +188,14 @@ public class Gamer extends UnicastRemoteObject implements Player {
 	@Override
 	public void withdraw() throws RemoteException {
 		game.withdraw(name);
+	}
+	
+	/* (non-Javadoc)
+	 * @see base.Player#isPlaying()
+	 */
+	@Override
+	public boolean isPlaying() throws RemoteException {
+		return (game != null);
 	}
 	
 	/* (non-Javadoc)

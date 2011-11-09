@@ -86,6 +86,7 @@ public class Client extends Shell {
 					display.sleep();
 				}
 			}
+			shell.quit();  // Finish
 			System.exit(0);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -114,13 +115,13 @@ public class Client extends Shell {
 
 		status = new Label(this, SWT.NONE);
 		status.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-		status.setFont(SWTResourceManager.getFont("Arial", 11, SWT.NORMAL));
-		status.setBounds(66, 237, 178, 15);
+		status.setFont(SWTResourceManager.getFont("Arial", 10, SWT.NORMAL));
+		status.setBounds(66, 237, 178, 21);
 		status.setText("Ready");
 
 		lblStatus = new Label(this, SWT.NONE);
 		lblStatus.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-		lblStatus.setFont(SWTResourceManager.getFont("Arial", 11, SWT.NORMAL));
+		lblStatus.setFont(SWTResourceManager.getFont("Arial", 10, SWT.NORMAL));
 		lblStatus.setBounds(10, 237, 50, 17);
 		lblStatus.setText("Status: ");
 		
@@ -401,7 +402,7 @@ public class Client extends Shell {
 		lblWelcomeToStein = new Label(composite, SWT.NONE);
 		lblWelcomeToStein.setAlignment(SWT.CENTER);
 		lblWelcomeToStein.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
-		lblWelcomeToStein.setFont(SWTResourceManager.getFont("Comic Sans MS", 22, SWT.NORMAL));
+		lblWelcomeToStein.setFont(SWTResourceManager.getFont("Boopee", 22, SWT.NORMAL));
 		lblWelcomeToStein.setBounds(0, 10, 230, 82);
 		lblWelcomeToStein.setText("Welcome\nto Stein!");
 	}
@@ -436,11 +437,14 @@ public class Client extends Shell {
 	public void quit()
 	{
 		try {
+			if (player.isPlaying())
+				player.withdraw();
 			server.leave(player);
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
-		this.close();
+		if (!this.isDisposed())
+			this.close();
 	}
 	
 	protected void checkSubclass() {
@@ -479,5 +483,6 @@ public class Client extends Shell {
 		errorPopup(player.opponent() + " left the building.");
 		composite_1.dispose();
 		LoadNewGamePane();
+		updateList();
 	}
 }

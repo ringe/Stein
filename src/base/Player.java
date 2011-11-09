@@ -106,4 +106,11 @@ public interface Player extends Remote {
 	 * @throws RemoteException
 	 */
 	public void gameUpdate() throws RemoteException;
+	
+	/**
+	 * Check if the Player is in a game.
+	 * @return true or false
+	 * @throws RemoteException
+	 */
+	public boolean isPlaying() throws RemoteException;
 }

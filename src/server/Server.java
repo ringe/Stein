@@ -102,6 +102,9 @@ public class Server extends UnicastRemoteObject implements Srv {
 		System.out.println(p.name() + " joined.");
 	}
 	
+	/* (non-Javadoc)
+	 * @see base.Srv#leave(base.Player)
+	 */
 	@Override
 	public void leave(Player p) throws RemoteException {
 		System.out.println(p.name() + " left.");
